@@ -451,7 +451,7 @@ class PointerTracker {
 
   private void showKeyPreviewAndUpdateKey(int keyIndex) {
     updateKey(keyIndex);
-    if (!isInGestureTyping()) mProxy.showPreview(keyIndex, this);
+//    if (!isInGestureTyping()) mProxy.showPreview(keyIndex, this);
   }
 
   private void startLongPressTimer(int keyIndex) {
