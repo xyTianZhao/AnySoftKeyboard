@@ -576,7 +576,7 @@
     <string name="label_home_key">Home</string>
     <string name="label_end_key">End</string>
 
-    <string name="change_lang_regular">ABC</string>
+    <string name="change_lang_regular">abc</string>
     <string name="change_symbols_regular">123</string>
 
     <string name="select_keyboard_popup_title">Select keyboard</string>

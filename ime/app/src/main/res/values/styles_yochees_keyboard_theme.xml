@@ -24,7 +24,7 @@
         <!-- should support normal, feedback -->
         <item name="iconKeyForwardDelete">@drawable/yochees_dark_forward_delete</item>
         <!-- should support normal, feedback -->
-        <item name="iconKeySpace">@drawable/yochees_dark_space</item>
+        <item name="iconKeySpace">@drawable/btn_keyboard_space</item>
         <!-- should support normal, feedback -->
         <item name="iconKeyTab">@drawable/sym_keyboard_tab</item>
         <!-- should support normal, feedback -->

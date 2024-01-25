@@ -1247,6 +1247,7 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
     for (Keyboard.Key keyBase : keys) {
       final AnyKey key = (AnyKey) keyBase;
       final boolean keyIsSpace = isSpaceKey(key);
+      final boolean keyIsSymbols = key.getPrimaryCode() == KeyCodes.MODE_SYMBOLS;
 
       if (drawSingleKey && (invalidKey != key)) {
         continue;
@@ -1261,7 +1262,7 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
       int[] drawableState = key.getCurrentDrawableState(mDrawableStatesProvider);
 
       if (keyIsSpace) {
-        paint.setColor(themeResourcesHolder.getNameTextColor());
+//        paint.setColor(themeResourcesHolder.getNameTextColor());
       } else {
         paint.setColor(keyTextColor.getColorForState(drawableState, 0xFF000000));
       }
@@ -1309,12 +1310,20 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
           if (keyIsSpace && drawKeyboardNameText) {
             // now a little hack, I'll set the label now, so it get
             // drawn.
-            label = mKeyboardName;
+//            label = mKeyboardName;
           }
         } else {
           // ho... no icon.
           // I'll try to guess the text
           label = guessLabelForKey(key.getPrimaryCode());
+        }
+      }
+
+      if (keyIsSymbols) {
+        if (mKeyboard instanceof GenericKeyboard) {
+          label = "abc";
+        } else {
+          label = "123";
         }
       }
 

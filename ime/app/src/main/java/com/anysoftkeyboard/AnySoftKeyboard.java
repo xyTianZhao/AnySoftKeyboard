@@ -500,7 +500,12 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardColorizeNavBar {
         onQuickTextKeyboardRequested(key);
         break;
       case KeyCodes.MODE_SYMBOLS:
-        nextKeyboard(getCurrentInputEditorInfo(), NextKeyboardType.Symbols);
+//        nextKeyboard(getCurrentInputEditorInfo(), NextKeyboardType.Symbols);
+        if (getKeyboardSwitcher().isAlphabetMode()){
+          nextKeyboard(getCurrentInputEditorInfo(), NextKeyboardType.Symbols);
+        } else {
+          nextKeyboard(getCurrentInputEditorInfo(), NextKeyboardType.Alphabet);
+        }
         break;
       case KeyCodes.MODE_ALPHABET:
         if (getKeyboardSwitcher().shouldPopupForLanguageSwitch()) {

@@ -28,9 +28,9 @@
     <!-- Functional keys. -->
 
     <item ask:key_type_function="true" android:state_pressed="true"
-          android:drawable="@drawable/btn_keyboard_key_normal"/>
+          android:drawable="@drawable/btn_keyboard_key_functional"/>
     <item ask:key_type_function="true"
-          android:drawable="@drawable/btn_keyboard_key_normal"/>
+          android:drawable="@drawable/btn_keyboard_key_functional"/>
 
     <!-- Toggle keys. Use checkable/checked state. -->
 

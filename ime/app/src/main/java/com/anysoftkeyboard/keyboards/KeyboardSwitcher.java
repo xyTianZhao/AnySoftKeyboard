@@ -549,7 +549,7 @@ public class KeyboardSwitcher {
     }
   }
 
-  private boolean isAlphabetMode() {
+  public boolean isAlphabetMode() {
     return mAlphabetMode;
   }
 
@@ -734,7 +734,7 @@ public class KeyboardSwitcher {
       nextKeyboardIndex =
           (scroll > 0) ? SYMBOLS_KEYBOARD_REGULAR_INDEX : SYMBOLS_KEYBOARD_LAST_CYCLE_INDEX;
     }
-    return nextKeyboardIndex;
+    return SYMBOLS_KEYBOARD_REGULAR_INDEX;
   }
 
   public String getCurrentKeyboardSentenceSeparators() {
