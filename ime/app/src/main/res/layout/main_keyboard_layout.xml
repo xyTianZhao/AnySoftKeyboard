@@ -21,7 +21,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/AnyKeyboardContainerView"
-    android:layout_width="match_parent"
+    android:layout_width="240dp"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
     android:animateLayoutChanges="false"
@@ -29,14 +29,14 @@
 
     <com.anysoftkeyboard.keyboards.views.CandidateView
         android:id="@+id/candidate_view"
-        android:layout_width="match_parent"
+        android:layout_width="240dp"
         android:layout_height="@dimen/candidate_strip_height"
         android:layout_margin="0px"
         android:padding="0px" />
 
     <com.anysoftkeyboard.keyboards.views.AnyKeyboardView
         android:id="@+id/AnyKeyboardMainView"
-        android:layout_width="match_parent"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
 
         android:layout_margin="0px"

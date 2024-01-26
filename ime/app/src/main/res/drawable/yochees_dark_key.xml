@@ -21,9 +21,9 @@
     <!-- Action key -->
 
     <item ask:key_type_action="true" android:state_pressed="true"
-        android:drawable="@drawable/btn_keyboard_key_normal"/>
+        android:drawable="@drawable/btn_keyboard_key_functional"/>
     <item ask:key_type_action="true"
-        android:drawable="@drawable/btn_keyboard_key_normal"/>
+        android:drawable="@drawable/btn_keyboard_key_functional"/>
 
     <!-- Functional keys. -->
 

@@ -4,6 +4,7 @@
     android:layout_width="@dimen/candidate_strip_height"
     android:layout_height="@dimen/candidate_strip_height"
     android:layout_gravity="center_vertical"
+    android:visibility="gone"
     android:background="@android:color/transparent"
     android:contentDescription="@string/developer_tools"
     android:scaleType="centerInside"

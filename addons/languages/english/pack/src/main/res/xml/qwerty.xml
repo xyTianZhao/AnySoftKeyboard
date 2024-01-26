@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ask="http://schemas.android.com/apk/res-auto"
     android:keyWidth="10%p"
     android:keyHeight="@integer/key_normal_height">
     <!-- for testing shiftCodes 
@@ -18,6 +19,7 @@
     </Row>
     -->
     <!-- original -->
+
     <Row>
         <Key android:codes="113" android:popupCharacters="1" android:keyEdgeFlags="left"/>
         <Key android:codes="119" android:popupCharacters="2ŵω"/>
@@ -45,8 +47,8 @@
     </Row>
 
     <Row>
-        <Key android:codes="-1" android:keyWidth="15%p"
-             android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left"/>
+        <Key ask:isFunctional="true" android:codes="-1" android:keyWidth="15%p" android:keyLabel="↑" ask:keyDynamicEmblem="text"
+            ask:shiftedKeyLabel="↑" android:isModifier="true" android:isSticky="true" android:keyEdgeFlags="left" />
         <Key android:codes="122" android:keyLabel="z" android:popupCharacters="żžźζ"/>
         <Key android:codes="120" android:keyLabel="x"  android:popupCharacters="ξχ"/>
         <Key android:codes="99" android:keyLabel="c" android:popupCharacters="çćĉčγ"/>
@@ -54,6 +56,7 @@
         <Key android:codes="98" android:keyLabel="b" android:popupCharacters="β"/>
         <Key android:codes="110" android:keyLabel="n" android:popupCharacters="ñńňν"/>
         <Key android:codes="109" android:keyLabel="m"  android:popupCharacters="μ"/>
-        <Key android:keyWidth="15%p" android:codes="-5" android:keyEdgeFlags="right" android:isRepeatable="true"/>
+        <Key ask:isFunctional="true" android:keyWidth="15%p" android:codes="-5" android:keyEdgeFlags="right" android:keyLabel="←"
+            ask:shiftedKeyLabel="←" ask:keyDynamicEmblem="text" android:isRepeatable="true"/>
     </Row>
 </Keyboard>

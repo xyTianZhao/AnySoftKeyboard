@@ -4,7 +4,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:ask="http://schemas.android.com/apk/res-auto">
     <!-- Generic bottom row -->
-    <Row android:keyboardMode="@integer/keyboard_mode_normal" android:rowEdgeFlags="bottom" android:keyWidth="10%p"
+    <Row android:keyboardMode="@integer/keyboard_mode_normal" android:rowEdgeFlags="bottom"
          android:keyHeight="@integer/key_normal_height">
         <Key android:codes="@integer/key_code_mode_symbols" ask:isFunctional="true" android:keyWidth="15%p"
             android:isModifier="true" ask:keyDynamicEmblem="text" android:keyEdgeFlags="left"/>
@@ -15,14 +15,14 @@
 <!--             android:popupCharacters="!/\@&amp;¿¡⸮‽"/>-->
 <!--        <Key ask:isFunctional="true" android:codes="44" android:keyLabel="," android:popupCharacters="()"/>-->
 
-        <Key ask:isFunctional="true" android:codes="@integer/key_code_space" android:keyWidth="60%p"/>
+        <Key ask:isFunctional="true" android:codes="@integer/key_code_space" android:keyWidth="55%p" ask:keyDynamicEmblem="text" android:keyLabel="space"/>
 
 <!--        <Key ask:isFunctional="true" android:codes="46" android:keyLabel="."-->
 <!--             android:popupCharacters=";:-—_·…"/>-->
 <!--        <Key ask:isFunctional="true" android:codes="39" android:keyLabel="\'" ask:shiftedCodes="34"-->
 <!--             android:popupCharacters="&quot;“„”‘’«»"/>-->
 
-        <Key ask:isFunctional="true" android:codes="@integer/key_code_enter" android:keyWidth="25%p" android:keyEdgeFlags="right" />
+        <Key ask:isFunctional="true" android:codes="@integer/key_code_enter" android:keyWidth="30%p" android:keyEdgeFlags="right" ask:keyDynamicEmblem="text" android:keyLabel="enter"/>
     </Row>
 
     <Row android:keyboardMode="@integer/keyboard_mode_im" android:rowEdgeFlags="bottom" android:keyWidth="10%p"

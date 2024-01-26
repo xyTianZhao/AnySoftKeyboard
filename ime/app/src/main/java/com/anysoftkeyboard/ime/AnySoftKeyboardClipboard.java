@@ -43,12 +43,12 @@ public abstract class AnySoftKeyboardClipboard extends AnySoftKeyboardSwipeListe
       new Clipboard.ClipboardUpdatedListener() {
         @Override
         public void onClipboardEntryAdded(@NonNull CharSequence text) {
-          AnySoftKeyboardClipboard.this.onClipboardEntryAdded(text);
+//          AnySoftKeyboardClipboard.this.onClipboardEntryAdded(text);
         }
 
         @Override
         public void onClipboardCleared() {
-          AnySoftKeyboardClipboard.this.onClipboardEntryAdded(null);
+//          AnySoftKeyboardClipboard.this.onClipboardEntryAdded(null);
         }
       };
 

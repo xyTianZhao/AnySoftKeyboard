@@ -546,7 +546,7 @@ public abstract class AnySoftKeyboard extends AnySoftKeyboardColorizeNavBar {
       case KeyCodes.CLIPBOARD_SELECT:
       case KeyCodes.UNDO:
       case KeyCodes.REDO:
-        handleClipboardOperation(key, primaryCode, ic);
+//        handleClipboardOperation(key, primaryCode, ic);
         break;
       case KeyCodes.IMAGE_MEDIA_POPUP:
         handleMediaInsertionKey();

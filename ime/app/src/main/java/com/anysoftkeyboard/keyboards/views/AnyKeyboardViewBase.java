@@ -1364,7 +1364,7 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
         final float centerY =
             mKeyBackgroundPadding.top
                 + ((key.height - mKeyBackgroundPadding.top - mKeyBackgroundPadding.bottom)
-                    / (keyIsSpace ? 3 : 2)); // the label on the space is a bit higher
+                    / 2); // the label on the space is a bit higher
 
         // the X coordinate for the center of the main label text is
         // unaffected by the hints
@@ -1614,22 +1614,23 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
   @NonNull private CharSequence guessLabelForKey(int keyCode) {
     switch (keyCode) {
       case KeyCodes.ENTER:
-        switch (mKeyboardActionType) {
-          case EditorInfo.IME_ACTION_DONE:
-            return getContext().getText(R.string.label_done_key);
-          case EditorInfo.IME_ACTION_GO:
-            return getContext().getText(R.string.label_go_key);
-          case EditorInfo.IME_ACTION_NEXT:
-            return getContext().getText(R.string.label_next_key);
-          case 0x00000007: // API 11: EditorInfo.IME_ACTION_PREVIOUS:
-            return getContext().getText(R.string.label_previous_key);
-          case EditorInfo.IME_ACTION_SEARCH:
-            return getContext().getText(R.string.label_search_key);
-          case EditorInfo.IME_ACTION_SEND:
-            return getContext().getText(R.string.label_send_key);
-          default:
-            return "";
-        }
+//        switch (mKeyboardActionType) {
+//          case EditorInfo.IME_ACTION_DONE:
+//            return getContext().getText(R.string.label_done_key);
+//          case EditorInfo.IME_ACTION_GO:
+//            return getContext().getText(R.string.label_go_key);
+//          case EditorInfo.IME_ACTION_NEXT:
+//            return getContext().getText(R.string.label_next_key);
+//          case 0x00000007: // API 11: EditorInfo.IME_ACTION_PREVIOUS:
+//            return getContext().getText(R.string.label_previous_key);
+//          case EditorInfo.IME_ACTION_SEARCH:
+//            return getContext().getText(R.string.label_search_key);
+//          case EditorInfo.IME_ACTION_SEND:
+//            return getContext().getText(R.string.label_send_key);
+//          default:
+//            return "";
+//        }
+        return "enter";
       case KeyCodes.KEYBOARD_MODE_CHANGE:
         if (mKeyboard instanceof GenericKeyboard) {
           return guessLabelForKey(KeyCodes.MODE_ALPHABET);

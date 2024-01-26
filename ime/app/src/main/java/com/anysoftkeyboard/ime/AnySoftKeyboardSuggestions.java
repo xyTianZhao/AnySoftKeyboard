@@ -1380,16 +1380,17 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
       }
       mRootView.setOnClickListener(
           view -> {
-            if (mCloseText.getVisibility() == View.VISIBLE) {
-              // already shown, so just cancel suggestions.
-              mCancelPrediction.run();
-            } else {
-              mCloseText.setVisibility(View.VISIBLE);
-              mCloseText.setPivotX(mCloseText.getWidth());
-              mCloseText.setPivotY(mCloseText.getHeight() / 2f);
-              mCloseTextToVisibleToGoneAnimation.setTarget(mCloseText);
-              mCloseTextToVisibleToGoneAnimation.start();
-            }
+            mCancelPrediction.run();
+//            if (mCloseText.getVisibility() == View.VISIBLE) {
+//              // already shown, so just cancel suggestions.
+//              mCancelPrediction.run();
+//            } else {
+//              mCloseText.setVisibility(View.VISIBLE);
+//              mCloseText.setPivotX(mCloseText.getWidth());
+//              mCloseText.setPivotY(mCloseText.getHeight() / 2f);
+//              mCloseTextToVisibleToGoneAnimation.setTarget(mCloseText);
+//              mCloseTextToVisibleToGoneAnimation.start();
+//            }
           });
 
       return mRootView;
