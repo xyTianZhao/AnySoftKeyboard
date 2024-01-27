@@ -215,7 +215,7 @@ public class AnyKeyboardViewWithMiniKeyboard extends SizeSensitiveAnyKeyboardVie
 
     // don't vibrate when selecting the first popup keyboard key
     PressVibrator.suppressNextVibration();
-    showMiniKeyboardForPopupKey(keyboardAddOn, key, isSticky);
+//    showMiniKeyboardForPopupKey(keyboardAddOn, key, isSticky);
     return true;
   }
 

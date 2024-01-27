@@ -146,6 +146,7 @@ dependencies {
     rootProject.findProject(":addons").subprojects.forEach {
         if (it.name == 'pack') {
             allAddOnsImplementation it
+//            implementation it
         }
     }
 }

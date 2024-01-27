@@ -1247,7 +1247,6 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
     for (Keyboard.Key keyBase : keys) {
       final AnyKey key = (AnyKey) keyBase;
       final boolean keyIsSpace = isSpaceKey(key);
-      final boolean keyIsSymbols = key.getPrimaryCode() == KeyCodes.MODE_SYMBOLS;
 
       if (drawSingleKey && (invalidKey != key)) {
         continue;
@@ -1277,6 +1276,23 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
       }
       canvas.translate(key.x + kbdPaddingLeft, key.y + kbdPaddingTop);
       keyBackground.draw(canvas);
+
+      if (key.getPrimaryCode() == KeyCodes.SHIFT){
+        label = "↑";
+      } else if (key.getPrimaryCode() == KeyCodes.DELETE){
+        label = "←";
+      } else if (key.getPrimaryCode() == KeyCodes.MODE_SYMBOLS) {
+        // todo 这里根据语言切换
+        if (mKeyboard instanceof GenericKeyboard) {
+          label = "abc";
+        } else {
+          label = "123";
+        }
+      } else if (key.getPrimaryCode() == KeyCodes.SPACE){
+        label = "space";
+      } else if (key.getPrimaryCode() == KeyCodes.ENTER){
+        label = "enter";
+      }
 
       if (TextUtils.isEmpty(label)) {
         Drawable iconToDraw = getIconToDrawForKey(key, false);
@@ -1319,13 +1335,6 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
         }
       }
 
-      if (keyIsSymbols) {
-        if (mKeyboard instanceof GenericKeyboard) {
-          label = "abc";
-        } else {
-          label = "123";
-        }
-      }
 
       if (label != null) {
         // For characters, use large font. For labels like "Done", use
